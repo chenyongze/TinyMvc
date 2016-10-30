@@ -1,0 +1,21 @@
+{
+    "name": "chenyongze/TinyMvc",
+    "description": "A Simple PHP Framework based on Composer",
+    "keywords": ["tiny", "simple", "framework"],
+    "require": 
+    {
+        "php": ">=5.4.0",
+        "noahbuscher/macaw": "dev-master",
+        "illuminate/database": "*",
+        "filp/whoops": "*",
+        "predis/predis": "*"
+    },
+    "autoload": 
+    {
+        "classmap": [
+          "app/controllers",
+          "app/models",
+          "services"
+        ]
+    }
+}
