@@ -1,21 +1,32 @@
 {
-    "name": "chenyongze/TinyMvc",
-    "description": "A Simple PHP Framework based on Composer",
-    "keywords": ["tiny", "simple", "framework"],
-    "require": 
-    {
-        "php": ">=5.4.0",
-        "noahbuscher/macaw": "dev-master",
-        "illuminate/database": "*",
-        "filp/whoops": "*",
-        "predis/predis": "*"
-    },
-    "autoload": 
-    {
-        "classmap": [
-          "app/controllers",
-          "app/models",
-          "services"
-        ]
+  "name": "chenyongze/TinyMvs",
+  "description": "A Simple PHP Framework based on Composer",
+  "keywords": ["tiny", "simple", "framework"],
+  "license": "MIT",
+  "require": {
+    "php": ">=5.4.0",
+    "tinylara/framework": "dev-master",
+    "illuminate/database": "~5.0",
+    "filp/whoops": "*",
+    "nette/mail": "*",
+    "predis/predis": "*",
+    "monolog/monolog": "1.13.1",
+    "danielstjules/stringy": "1.8"
+  },
+  "autoload": {
+    "classmap": [
+      "app/controllers",
+      "app/models",
+      "services"
+    ]
+  },
+  "config": {
+    "preferred-install": "dist"
+  },
+  "repositories": {
+    "packagist": {
+      "type": "composer",
+      "url": "https://packagist.phpcomposer.com"
     }
+  }
 }

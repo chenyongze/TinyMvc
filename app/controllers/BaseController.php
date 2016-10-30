@@ -1,39 +1,19 @@
 <?php
-
 /**
+* \BaseController
+*/
+class BaseController {
 
- * \BaseController
+  public function __construct()
+  {
+  }
 
- */
+  public function validate($data, $rules)
+  {
+    return new \TinyLara\Validation\Validator($data, $rules);
+  }
 
-class BaseController
-
-{
-
-    protected $view;
-
-
-
-    public function __construct()
-
-    {
-
-    }
-
-    public function __destruct()
-
-    {
-
-        $view = $this->view;
-
-        if ( $view instanceof View ) {
-
-            extract($view->data);
-
-            require $view->view;
-
-        }
-
-    }
-
+  public function __destruct()
+  {
+  }
 }

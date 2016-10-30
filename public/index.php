@@ -1,12 +1,10 @@
 <?php
-// 定义 PUBLIC_PATH
 
+// PUBLIC_PATH
 define('PUBLIC_PATH', __DIR__);
 
-// 启动器
-
+// bootstrap
 require PUBLIC_PATH.'/../bootstrap.php';
 
-// 路由配置、开始处理
-
+// Routes and Begin processing
 require BASE_PATH.'/config/routes.php';

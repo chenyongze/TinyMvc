@@ -1,19 +1,19 @@
 <?php
 
-use NoahBuscher\Macaw\Macaw;
+use TinyLara\Routing\Router as Route;
 
-Macaw::get('', 'HomeController@home');
+Route::get('/', 'HomeController@home');
 
-Macaw::get('fuck', function() {
-
-      echo "成功！";
-
+Route::any('foo', function() {
+  echo "Foo!";
 });
 
-Macaw::$error_callback = function() {
+Route::filter(function() {
+  return isset($_GET['token']) && $_GET['token'] == 1;
+}, function(){
+  Route::any('bar', function() {
+    echo "Bar!<br>Filter Success!";
+  });
+});
 
-      throw new Exception("路由无匹配项 404 Not Found");
-
-};
-
-Macaw::dispatch();
+Route::dispatch('View@process');
